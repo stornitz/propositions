@@ -1,0 +1,77 @@
+<% include ../partials/header %>
+<ul id="online-users" class="dropdown-content">
+	<div id="online-users-list">
+	</div>
+	<li class="divider"></li>
+	<li class="online-user disconnect">
+		<a href="/disconnect" class="tooltipped red-text" data-position="left" data-delay="50" data-tooltip="Connecté en tant que <%= name %>">Se déconnecter</a>
+	</li>
+</ul>
+
+<main>
+	<div id="suggestions" class="row">	
+
+	</div>
+
+	<!-- Modal -->
+	<div id="add-modal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+  			<h4 class="hide-on-small-only">Ajout d'une proposition</h4>
+  			<h5 class="hide-on-med-and-up">Ajout d'une proposition</h5>
+  			<div class="divider"></div>
+				<div class="row">
+		    	<div class="input-field col s12 m8 l6">
+		      		<input id="title" type="text" class="validate" length="20" required>
+		      		<label class="active" for="title">Titre</label>
+		    	</div>
+		  	</div>
+		  	<div class="row">
+		    	<div class="input-field col s12">
+		        	<textarea id="description" class="materialize-textarea validate" length="150"></textarea>
+		        	<label for="description">Description</label>
+		        </div>
+	      	</div>
+		</div>
+		<div class="modal-footer">
+ 			<a id="add-button" onclick="sendSuggestion()" href="#!" class="disabled modal-action modal-close waves-effect waves-green btn ">Ajouter</a>
+ 			<a onclick="eraseSuggestion()" href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Annuler</a>
+		</div>
+		</div>
+
+	<div id="add-modal-button" class="fixed-action-btn horizontal modal-trigger online-only-display" style="display: none" data-target="add-modal">
+	    <a class="btn-floating btn-large red waves-effect waves-circle waves-light">
+	    	<i class="large material-icons">add</i>
+	    </a>
+	</div>
+	<!-- END Modal -->
+
+	<!-- Message Modal -->
+	<div id="msg-modal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h4 class="title"></h4>
+			<p class="text"></p>
+		</div>
+		<div class="modal-footer">
+	    	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Fermer</a>
+		</div>
+	</div>
+		<!-- END Message Modal -->
+
+	<div id="connecting" class="offline-only-display">
+		Connexion au serveur en cours...
+		<div class="progress">
+  			<div class="indeterminate"></div>
+			</div>
+	</div>
+</main>
+
+<% include ../partials/models %>
+<% include ../partials/scripts %>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js"></script>
+<script type="text/javascript">
+	const HOST = '<%= host %>';
+</script>
+<script type="text/javascript" src="js/client.js"></script>
+
+<% include ../partials/footer %>

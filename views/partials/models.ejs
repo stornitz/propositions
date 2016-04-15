@@ -1,0 +1,62 @@
+<div style="display: none">
+	<div id="navbar-model">
+		<li class="poll%id%"><a onclick="getSuggestions(%id%)" href="#p%id%">%name%</a></li>
+	</div>
+
+	<div id="online-user">
+		<li class="online-user" id="u%id%"><a>%name%</a></li>
+	</div>
+
+	<!-- Classe pour désactiver: card-disabled -->
+	<!-- Big suggestion -->
+	<div id="big-suggestion">
+	   	<div id="s%id%" data-score=%score% class="col s12 m8 offset-m2 l6 offset-l3">
+	    	<div class="card-panel light-card grey lighten-5 z-depth-1">
+	    		<a href="#s%id%" class="card-id">%id%</a>
+	        	<div class="row no-margin-bottom valign-wrapper">
+		        	<div class="col s2">
+		            	<a class="hide-on-small-only btn-floating btn-large no-btn blue main-btn score">%score%</a>
+		            	<a class="hide-on-med-and-up btn-floating btn no-btn blue main-btn score">%score%</a>
+		            </div>
+		            <div class="col s6 m8">
+		            	<div class="card-content">
+			              <span class="card-title">%title%</span>
+			              <p>%description%</p>
+			              <div class="chip small-chip">%author%</div>
+			            </div>
+		            </div>
+		            <div class="col s4 m2">
+		            	<a onclick="vote(%id%, 1)" class="hide-on-small-only btn-floating green btn waves-effect waves-circle waves-light score-btn"><i class="material-icons left">add</i></a>
+		            	<a onclick="vote(%id%, -1)" class="hide-on-small-only btn-floating red btn waves-effect waves-circle waves-light score-btn"><i class="material-icons right">remove</i></a>
+		            	<a onclick="vote(%id%, 1)" class="hide-on-med-and-up btn-floating green btn-small waves-effect waves-circle waves-light score-btn"><i class="material-icons left">add</i></a>
+						<a onclick="vote(%id%, -1)" class="hide-on-med-and-up btn-floating red btn-small waves-effect waves-circle waves-light score-btn"><i class="material-icons right">remove</i></a>
+		            </div>
+	          	</div>
+	        </div>
+	   	</div>
+	</div>
+
+   	<!-- Small suggestion -->
+   	<div id="small-suggestion">
+	   	<div id="s%id%" data-score=%score% class="col s12 m8 offset-m2 l6 offset-l3">
+	    	<div class="card-panel light-card grey lighten-5 z-depth-1">
+	    		<a href="#s%id%" class="card-id">%id%</a>
+	        	<div class="row no-margin-bottom valign-wrapper">
+		        	<div class="col s2">		            	
+		            	<a class="btn-floating btn no-btn blue main-btn score">%score%</a>
+		            </div>
+		            <div class="col s6 m8">
+		            	<div class="card-content">
+			              <div class="card-title">%title%</div>
+			              <div class="chip small-chip">%author%</div>
+			            </div>
+		            </div>
+		            <div class="col s4 m2 score_buttons">
+		            	<a onclick="vote(%id%, 1)" class="btn-floating green btn-small waves-effect waves-circle waves-light score-btn"><i class="material-icons left">add</i></a>
+						<a onclick="vote(%id%, -1)" class="btn-floating red btn-small waves-effect waves-circle waves-light score-btn"><i class="material-icons right">remove</i></a>
+		            </div>
+	          	</div>
+	        </div>
+	   	</div>
+	</div>
+</div>

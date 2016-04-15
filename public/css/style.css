@@ -1,0 +1,169 @@
+.hidden {
+	display: none !important;
+}
+
+.btn-small {
+	width: 25px;
+	height: 25px;
+}
+
+.btn-small > i {
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.no-btn {
+	cursor: default;
+}
+
+.small-chip {
+	font-size: 10px;
+	height: 20px; 
+	line-height: 20px;
+}
+
+.light-card {
+	padding: 10px;
+	margin: 0.5rem 0 0 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.btn-large {
+	font-size: 22px;
+}
+
+.card-title {
+	font-weight: bold;
+}
+
+.card-panel {
+	position: relative;
+}
+
+.card-id {
+	position: absolute;
+	bottom: 0;
+	right: 3px;
+	font-size: 10px;
+	font-style: italic;
+	color: #9e9e9e;
+}
+
+.card-id:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.card-id::before {
+	content: '#';
+}
+
+.card-disabled .card-panel {
+	background-color: #DFDFDF !important;
+}
+.card-disabled .main-btn {
+	background-color: #E6E6E6 !important;
+}
+
+.card-disabled .card-panel, .card-disabled .main-btn, .card-disabled .chip {
+	color: #9F9F9F !important;
+}
+
+.card-disabled .score-btn {
+	opacity: 0.7;
+}
+
+.brand-logo {
+	margin-left: 10px;
+}
+
+.vote_1 .score-btn:nth-child(2), .vote_-1 .score-btn:first-child {
+	opacity: 0.5;
+}
+
+.vote_1.card-disabled .score-btn:nth-child(2), .vote_-1.card-disabled .score-btn:first-child {
+	opacity: 0.3 !important;
+}
+
+.vote_1.card-disabled .score-btn:first-child, .vote_-1.card-disabled .score-btn:nth-child(2) {
+	opacity: 0.8 !important;
+}
+
+#connecting {
+	text-align: center;
+	font-style: italic;
+	font-size: 20px;
+}
+
+#connecting > .progress {
+	width: 300px;
+	margin: auto;
+}
+
+#add-button.disabled {
+	cursor: not-allowed;
+}
+
+#add-modal-button {
+	bottom: 35px;
+	right: 25px; 
+}
+
+.online-user a {
+	padding: 10px 16px !important;
+	line-height: 16px;
+}
+
+.online-user {
+	min-height: 0 !important;
+	overflow-x: hidden;
+}
+
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+footer.page-footer {
+	padding-top: 0;
+}
+
+footer .online-count {
+	font-size: 12px;
+}
+
+footer .online-count::after {
+	content: ' utilisateurs en ligne'
+}
+
+.refused {
+	background-color: #9EA8BA !important;
+}
+
+.refused:hover {
+	background-color: #F44336 !important;
+}
+
+.abcRioButton {
+	height:50px;
+	width:260px !important;
+	margin:auto;
+}
+
+.online-count {
+	color: #e0e0e0 !important;
+}
+
+.online-count.badge {
+	background-color: #26a69a;
+    border-radius: 2px;
+}

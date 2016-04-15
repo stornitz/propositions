@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Propositions</title>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ee6e73" />
+
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav>
+	    <div class="nav-wrapper">
+	      	<a href="#" class="brand-logo">Propositions</a>
+	      	<div class="online-only-display" style="display: none">
+		      	<a href="#" data-activates="sidenav" class="button-collapse" >
+		      		<i class="material-icons">menu</i>
+		      	</a>
+		    </div>
+
+	     	<ul class="right hide-on-med-and-down online-only-display" style="display:none">
+	     		<span id="navbar"></span>
+	     		<li>
+	     			<a 
+	     				data-beloworigin="true" 
+	     				data-activates="online-users"
+	     				data-hover="true"
+	     				class="dropdown-button" href="#!">
+	     				Utilisateurs en ligne<span class="online-count badge">0</span>
+	     			</a>
+	     		</li>
+	     	</ul>
+	      	<ul class="side-nav" id="sidenav">
+	      		<div id="sidenav-content"></div>
+	      		<li class="divider"></li>
+				<li class="online-user disconnect">
+					<a href="/disconnect" class="red-text">Se déconnecter</a>
+				</li>
+	      	</ul>
+	    </div>
+  	</nav>
